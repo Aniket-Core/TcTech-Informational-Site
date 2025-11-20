@@ -117,29 +117,65 @@ document.addEventListener('DOMContentLoaded', () => {
         statsObserver.observe(statsSection);
     }
 
-    // Form Submission Handling (Demo)
+    // Form Submission Handling - Google Sheets Integration
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerText;
 
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+                page: window.location.pathname
+            };
+
+            // Show loading state
             btn.innerText = 'Sending...';
             btn.disabled = true;
 
-            // Simulate sending
-            setTimeout(() => {
+            try {
+                // Send to Google Apps Script
+                const response = await fetch('https://script.google.com/a/macros/transcurators.com/s/AKfycbwpuIrF-CRscA3EE-wB8Lekx0nq2pWYh9HD0gC3x-SA54r16zgoxidxqhvIgdaJque8RA/exec', {
+                    method: 'POST',
+                    mode: 'no-cors', // Required for Google Apps Script
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                // Show success message
                 btn.innerText = 'Message Sent!';
                 btn.style.backgroundColor = '#00b894';
                 contactForm.reset();
 
+                // Reset button after 3 seconds
                 setTimeout(() => {
                     btn.innerText = originalText;
                     btn.disabled = false;
                     btn.style.backgroundColor = '';
                 }, 3000);
-            }, 1500);
+
+            } catch (error) {
+                // Show error message
+                btn.innerText = 'Error! Try Again';
+                btn.style.backgroundColor = '#d63031';
+
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    btn.style.backgroundColor = '';
+                }, 3000);
+
+                console.error('Form submission error:', error);
+            }
         });
     }
+
 });
