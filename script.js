@@ -142,13 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Send to Google Apps Script
                 const response = await fetch('https://script.google.com/a/macros/transcurators.com/s/AKfycbwpuIrF-CRscA3EE-wB8Lekx0nq2pWYh9HD0gC3x-SA54r16zgoxidxqhvIgdaJque8RA/exec', {
                     method: 'POST',
-                    mode: 'no-cors', // Required for Google Apps Script
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(formData)
+                    body: JSON.stringify(formData),
+                    redirect: 'follow'
                 });
 
+                // Since Google Apps Script may redirect, we consider any non-error response as success
                 // Show success message
                 btn.innerText = 'Message Sent!';
                 btn.style.backgroundColor = '#00b894';
