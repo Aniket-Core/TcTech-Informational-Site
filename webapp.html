@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Development - TcTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">TcTech<span>.</span></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <h1>Web App <span class="gradient-text">Development</span></h1>
+                    <p>Building scalable, cloud-native applications that power modern enterprises.</p>
+                    <a href="#contact" class="btn btn-primary">Launch SaaS</a>
+                </div>
+                <div class="hero-visual fade-in-left">
+                    <div class="infographic-box">
+                        <div class="cloud-icon">
+                            <i class="fas fa-cloud"></i>
+                            <div class="data-particle p1"></div>
+                            <div class="data-particle p2"></div>
+                            <div class="data-particle p3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="about-content fade-in-up">
+                    <h2 class="section-title">Scalable Solutions</h2>
+                    <p>Modern businesses require more than just static websites; they need dynamic, interactive web
+                        applications that streamline operations and deliver value. TcTech specializes in building
+                        complex, data-driven web applications, from SaaS platforms to enterprise resource planning (ERP)
+                        systems.</p>
+                    <p>We architect solutions that are secure, scalable, and easy to maintain. By leveraging cloud
+                        technologies and microservices architectures, we ensure your application can handle growth
+                        without compromising performance. Our focus is on creating tools that your users will love to
+                        use every day.</p>
+
+                    <h3 style="margin-top: 40px; margin-bottom: 20px;">Agile Development Lifecycle</h3>
+                    <div class="process-timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-number">01</span>
+                            <h4>Requirements Gathering</h4>
+                            <p>We work closely with stakeholders to define functional and non-functional requirements.
+                                We create user stories to capture every feature needed.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">02</span>
+                            <h4>System Architecture</h4>
+                            <p>We design a robust architecture, choosing the right database, server environment, and
+                                frontend framework to support your long-term goals.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">03</span>
+                            <h4>Iterative Development</h4>
+                            <p>We build in sprints, delivering working modules every two weeks. This allows for
+                                continuous feedback and rapid adjustments.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">04</span>
+                            <h4>CI/CD Pipeline</h4>
+                            <p>We set up automated testing and deployment pipelines. This ensures code quality and
+                                allows for frequent, reliable releases.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">05</span>
+                            <h4>Cloud Deployment</h4>
+                            <p>We deploy your application to secure cloud environments like AWS or Azure, configuring
+                                auto-scaling and load balancing for optimal performance.</p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 40px; margin-bottom: 20px;">Technology Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fab fa-angular"></i>
+                            <h4>Angular</h4>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-react"></i>
+                            <h4>React</h4>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-node"></i>
+                            <h4>Node.js</h4>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-python"></i>
+                            <h4>Django</h4>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fas fa-database"></i>
+                            <h4>PostgreSQL</h4>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-docker"></i>
+                            <h4>Docker</h4>
+                        </div>
+                    </div>
+
+                    <div class="comparison-box">
+                        <h3 style="text-align: center; margin-bottom: 30px;">Why Choose TcTech?</h3>
+                        <div class="comparison-grid">
+                            <div class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Cloud Native:</strong> Built for the
+                                    cloud from day one.</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>High Performance:</strong> Optimized for
+                                    speed and efficiency.</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Secure By Design:</strong> OWASP top 10
+                                    compliance.</li>
+                            </div>
+                            <div class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Scalable:</strong> Grows with your user
+                                    base.</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>API First:</strong> Ready for
+                                    third-party integrations.</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>DevOps:</strong> Streamlined operations
+                                    and maintenance.</li>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-container">
+                <div class="contact-info fade-in-right">
+                    <h2 class="section-title">Build Your Platform</h2>
+                    <p>Ready to scale your business with a custom web app?</p>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>webapp@tctech.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form fade-in-up">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Project Details</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">TcTech<span>.</span></a>
+                <p>Innovating for tomorrow, today.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TcTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
